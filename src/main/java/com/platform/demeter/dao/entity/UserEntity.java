@@ -1,15 +1,13 @@
 package com.platform.demeter.dao.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
+@Entity
+@Table(name = "user")
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,4 +18,10 @@ public class UserEntity {
     private String email;
 
     private String password;
+
+    private Integer type;
+
+    private String address;
+
+    private String contactNumer;
 }
