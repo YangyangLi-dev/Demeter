@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 public class SubscriptionServiceImpl implements SubscriptionService {
   @Autowired private SubscriptionRepository subscriptionRepository;
 
-  public void subscribe(UserEntity user, SubscriptionEntity subscription) {
-    subscription.setUser(user);
-    subscriptionRepository.save(subscription);
+  @Override
+  public void subscribe() {
+
   }
 }
